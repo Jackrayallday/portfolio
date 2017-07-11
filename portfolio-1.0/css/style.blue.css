@@ -2369,7 +2369,7 @@ section.header-parallax.fixed-top .container .logo span:after {
     Full Icon Set (Material Icons & Font Awesome)
 -----------------------------------*/
 .fontawesome div, .fontawesome div *,
-.material_icons div, .material_icons div *,
+.material_icons div, .material_icons div *
 {
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -3285,7 +3285,7 @@ section.section-features.bg-primary .headul:before {
     }
 
     .features .feature:nth-of-type(6) {
-        margin-bottom: 0px;
+        margin-bottom: 100px;
     }
     .features .feature:nth-of-type(4),
     .features .feature:nth-of-type(5) {
@@ -3299,7 +3299,7 @@ section.section-features.bg-primary .headul:before {
     }
     .features .feature:nth-of-type(5),
     .features .feature:nth-of-type(6) {
-        margin-bottom: 0px;
+        margin-bottom: 100px;
     }
 }
 
@@ -3307,7 +3307,7 @@ section.section-features.bg-primary .headul:before {
     .features .feature:nth-of-type(4),
     .features .feature:nth-of-type(5),
     .features .feature:nth-of-type(6) {
-        margin-bottom: 0px;
+        margin-bottom: 100px;
     }
 }
 
@@ -3318,7 +3318,7 @@ section.section-features.bg-primary .headul:before {
     .features .feature:nth-of-type(4),
     .features .feature:nth-of-type(5),
     .features .feature:nth-of-type(6) {
-        margin-bottom: 0px;
+        margin-bottom: 100px;
     }
 }
 
