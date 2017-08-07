@@ -7,7 +7,7 @@
         <script type="text/javascript" src="js/pace.min.js"></script>
         <link href="css/pace-loading-bar.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/animate.caliber.css">
-        <link rel="stylesheet" type="text/css" href="css/materialdesignicons.caliber.css">
+        <!--<link rel="stylesheet" type="text/css" href="css/materialdesignicons.caliber.css">-->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script src="js/inviewport-1.3.2.js"></script>
@@ -16,8 +16,6 @@
         <!--Fancybox -->
         <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-        <!-- Main Style -->
-        <link rel="stylesheet" id="main-style" type="text/css" href="css/style.blue.css">
         <script type="text/javascript" src="js/main.js"></script>
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
@@ -28,10 +26,13 @@
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">
+        <!-- Main Style -->
+        <link rel="stylesheet" id="main-style" type="text/css" href="css/style.blue.css">
 
 
     </head>
-    <body class="horizontal blue">
+    <body class="horizontal blue" onload="window.scroll(0, 1)">
         <!-- Section Start - Header -->
         <section class="header bg-lightgray header-1" >
             <!-- Menu Top Bar - Start -->
@@ -68,6 +69,11 @@
         </div>
     </div>
     <!-- Menu Top Bar - End -->
+    <!--Button for back to top - Start-->
+            <button style="border: 0; background: transparent" onclick="clickToTop()" id="topButton" title="To top">
+                <img src="img/toTop.png" width="50" height="50" alt="top" />
+            </button>
+    <!--Button for back to top - End-->
     <!-- Logo and Mobile Menu - Start -->
     <div class='header-logo-wrap'>
         <div class="container">
@@ -90,7 +96,7 @@
             <div class="primary inviewport animated delay4" data-effect="fadeInRightOpacity"></div>
             <!-- Header Text - Start -->
             <div class="maintext">
-                <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
+                <div class="primary-text inviewport animated delay4 " data-effect="fadeInRightBig">
                     <div class="left-line">
                         <h4>Web Developer</h4>
                         <h1>Jack</h1>
@@ -215,8 +221,8 @@
         <h1 class="heading text-white left-align">About Me</h1>
         <div class="headul white left-align"></div>
         <p class="subheading text-white left-align">Welcome to my site!</p>
-        <p>I am a 21 year old web developer from Orange County who loves to design and create awesome web pages.</p>
-        <p><a style="color: inherit" href="">You can download my full resume by clicking here</a></p>
+        <p>I am a 21 year old web developer from Orange County who loves to design and create awesome web pages. I am currently working on becoming the best web developer I can possibly be.</p>
+        <p><a style="color: inherit" href="https://docs.google.com/document/d/1QypLtKzzCDNkfGWZ75x9SLdtSpia1apT6x8rG3TZk4U/edit" target="_blank">You can download my full resume by clicking here</a></p>
     </div>
     <div class="col-lg-9 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 service-tablets">
         <div class="tablet-black inviewport animated delay1" data-effect="fadeInRight"><img alt="tablet-black" src="img/about_me_img.jpg" class="style-dependent img-responsive" style="    position: relative; width: 47%; left: 25%; bottom: 5vw;" ></div>
@@ -229,8 +235,9 @@
 <section  id='portfolio'><div class="container">
 <div class="row gallery-row">
     <h1 class="heading">My Projects</h1>
-    <div class="headul"></div>
-    <p class="subheading">Here are a couple of sample projects that I have made since becoming a web developer. <a href="" style="color: inherit"> You can access my code on github here.</a></p>
+    <div class="headul"></div>=
+    <!--<p class="subheading">Here are a couple of sample projects that I have made since becoming a web developer. <a href="https://github.com/Jackrayallday" style="color: inherit"> You can access my code on github here.</a></p>-->
+    <p class="subheading">I have created many projects during my time as a web developer, here are a few of my favorite from those projects. <a href="https://github.com/Jackrayallday" style="color: inherit"> You can access my code on github here.</a></p>
     <!-- Filter Categories - Start -->
     <!--<div class="filter-categories filter-mixitup">-->
         <!--<span class="btn filter " data-filter="all">All</span>-->
@@ -243,10 +250,10 @@
     <!-- Portfolio Items - Start -->
     <div class="filter-items filter-mixitup  inviewport animated " data-effect="fadeIn" id="gallery-mixitup">
         <!-- Item - Start -->
-        <div class="filter-item development col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0" style="margin: 0 15vw">
+        <div class="filter-item development col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
             <img alt="gallery-image" src="img/calculator_image.JPG" class="img-responsive transition">
             <div class="info transition">
-                <a class="btn btn-primary fancybox" title="Calculator" data-fancybox-group="calculator" href="img/calculator_image.JPG"><i class="mdi mdi-image-area"></i></a>
+                <a class="btn btn-primary fancybox" title=Calculator data-fancybox-group="calculator" href="https://www.google.com/" target="_blank"><i class="mdi mdi-desktop-mac"></i></a>
             </div>
         </div>
         <!-- Item - End -->
@@ -254,18 +261,18 @@
         <div class="filter-item photography col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
             <img alt="gallery-image" src="img/lob_thumb.JPG" class="img-responsive transition">
             <div class="info transition">
-                <a class="btn btn-primary fancybox" title="League of Boatwrights" data-fancybox-group="gallery" href="img/lob_thumb.JPG"><i class="mdi mdi-video"></i></a>
+                <a class="btn btn-primary fancybox" title="League of Boatwrights" data-fancybox-group="gallery" href="http://test-lob-playground.pantheonsite.io/" target="_blank"><i class="mdi mdi-desktop-mac"></i></a>
             </div>
         </div>
         <!-- Item - End -->
-        <!-- Item - Start -->
-        <!--<div class="filter-item design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">-->
-            <!--<img alt="gallery-image" src="img/gallery-3.jpg" class="img-responsive transition">-->
-            <!--<div class="info transition">-->
-                <!--<a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-3.jpg"><i class="mdi mdi-image-area"></i></a>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!-- Item - End -->
+         <!--Item - Start -->
+        <div class="filter-item design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/dayMakr.JPG" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="DayMakr" data-fancybox-group="gallery" href="https://www.google.com" target="_blank"><i class="mdi mdi-desktop-mac"></i></a>
+            </div>
+        </div>
+         <!--Item - End-->
     </div>
     <!-- Portfolio Items - End -->
 </div>
@@ -309,7 +316,14 @@
     <p class="subheading">Do you have any questions, comments, or concerns? Please leave them in the form provided below and I will to get back to you as quickly as possible</p>
     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 inviewport animated delay1" data-effect="fadeInUp">
         <!-- Contact Form - Start -->
-        <form action='maintainemail.php' method='post'><input type='text' placeholder='Name' class='col-xs-12 transition' id='c_name' ><input type='text' placeholder='Email' class='col-xs-12 transition' id='c_email' ><input type='text' placeholder='Phone' class='col-xs-12 transition' id='c_phone' ><textarea class='col-xs-12 transition' placeholder='Message' id='c_message' ></textarea><div id='response_email'></div><button type='button' class='btn btn-block btn-primary disabled transition' id='c_send'>Send Message</button></form>
+        <form action='maintainemail.php' method='post'>
+            <input type='text' placeholder='Name' class='col-xs-12 transition' id='c_name' >
+            <input type='text' placeholder='Email' class='col-xs-12 transition' id='c_email' >
+            <input type='text' placeholder='Phone' class='col-xs-12 transition' id='c_phone' >
+            <textarea class='col-xs-12 transition' placeholder='Message' id='c_message' ></textarea>
+            <div id='response_email'></div>
+            <button type='button' class='btn btn-block btn-primary disabled transition' id='c_send'>Send Message</button>
+        </form>
         <!-- Contact Form - End -->
     </div>
     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 contacts inviewport animated delay1" data-effect="fadeInUp">
@@ -321,8 +335,13 @@
             <div class='col-md-6 col-sm-8 col-xs-8 info'>
                 <h4>Jack Ray</h4>
                 <!--<div class='post'>President</div>-->
-                <span>Email: </span><span>jackray</span><span>3111@gmail.com</span>
-                <span>Phone: </span><span> 1 714 </span><span>272-</span><span>1493</span>
+                <a href="mailto:jackraydev3111@gmail.com" ><span>Email: </span><span id="email">email goes here</span></a>
+                <a href="tel:7142721493"><span>Phone: </span><span id="phone">phone number goes here</span></a>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/jack-ray-921609136" target="_blank"><i class="mdi mdi-linkedin"></i></a>
+                    <a href="https://docs.google.com/document/d/1QypLtKzzCDNkfGWZ75x9SLdtSpia1apT6x8rG3TZk4U/edit" target="_blank"><i class="mdi mdi-information text-on-primary"></i></a>
+                    <a href="https://github.com/Jackrayallday" target="_blank"><i class="mdi mdi-github-circle text-on-primary"></i></a>
+                </div>
             </div>
         </div>
             <!-- Contact Person - End -->

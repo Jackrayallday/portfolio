@@ -486,8 +486,9 @@ a {
 }
 
 a:hover,
-a:focus {
-    color: #212121;
+a:focus,
+a:visited{
+    color: #05638e;
 }
 
 p {
@@ -4797,7 +4798,26 @@ body.horizontal section.clients{
     color: #757575;
     margin-bottom: 30px;
 }
+.filter-item {
+    margin: 4vw 0 0 6vw;
+}
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    z-index: 99;
+    right: 45vw;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
 
+#toTop:hover {
+    background-color: #555;
+}
 /*----------------------------------
             Bootstrap 3 Media Queries             
 ----------------------------------*/

@@ -90,7 +90,7 @@ jQuery(function($) {
     CALIBER_SETTINGS.fixedParallaxHeader = function() {
 
         if ($.isFunction($.fn.parallax)) {
-            //  alert($(window).scrollTop() +" "+$("#slides").height());
+             // alert($(window).scrollTop() +" "+$("#slides").height());
             if ($(window).scrollTop() >= 50) {
                 $('.header-parallax').addClass("fixed-top");
             } else {
@@ -280,7 +280,7 @@ jQuery(function($) {
         $('#c_message').keyup(function() {
 
             var message = $("#c_message").val();
-            if (message == null || message == "" || message.length < 9) {
+            if (message == null || message == "" || message.length < 0) {
                 $("#c_message").removeClass("green");
                 console.log("message err");
             } else {
@@ -299,7 +299,19 @@ jQuery(function($) {
 
         $("#c_send").on('click', function() {
             if ($(this).hasClass("disabled")) {
-                        $("#response_email").html("Please Fill in your details correctly and try again");
+                        // $("#response_email").html("Please Fill in your details correctly and try again");
+                        if($('#c_name').val() == ""){
+                            $("#response_email").html("Please Fix your name and then try again");
+                        }
+                        else if($('#c_email').val() == ""){
+                            $("#response_email").html("Please fix your email address and then try again");
+                        }
+                        else if($('#c_phone').val() == "" ){
+                            $("#response_email").html("Please fix your phone number and then try again");
+                        }
+                        else if($('#c_message').val() == ""){
+                            $("#response_email").html("Please add at least 8 characters for a message");
+                        }
             } else {
 
               var email = $('#c_email').val();
@@ -460,6 +472,12 @@ jQuery(function($) {
         CALIBER_SETTINGS.fancyBox();
         CALIBER_SETTINGS.parallaxScrolling();
         CALIBER_SETTINGS.settingsPanel();
+        var emailParts = ["jack", "@", "com", "ray3111", "gmail."];
+        var email = emailParts[0] + emailParts[3] + emailParts[1] + emailParts[4] + emailParts[2];
+        document.getElementById("email").innerHTML=email;
+        var phoneParts = [" 714", "1", " 14", " 272", "93"];
+        var phone = phoneParts[1] + phoneParts[0] + phoneParts[3] + phoneParts[2] + phoneParts[4];
+        document.getElementById("phone").innerHTML=phone;
        });
 
     $(window).scroll(function() {
@@ -473,3 +491,19 @@ jQuery(function($) {
     });
 
 });
+// Custom JS //
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {toTop()};
+
+function clickToTop() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+function toTop() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("topButton").style.display = "block";
+    } else {
+        document.getElementById("topButton").style.display = "none";
+    }
+}
+

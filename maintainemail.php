@@ -1,5 +1,5 @@
 <?php
-$to = "email@example.com";
+$to = "jackraydev@gmail.com";
 $subject = "Caliber - Multi Purpose HTML Theme";
 $message = "Name:<br>".$_POST["name"]."<br><br>Email:<br>".$_POST["email"]."<br><br>Phone:<br>".$_POST["phone"]."<br><br>Message:<br>".$_POST["msg"];
 $from = $_POST["email"];
